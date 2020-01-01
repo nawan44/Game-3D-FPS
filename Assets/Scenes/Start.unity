@@ -950,6 +950,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.25955006
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 1495bacdec54a2f439c904aa72cbc8d6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7c10d059bb65d904aa9dd44944bb75be, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1495bacdec54a2f439c904aa72cbc8d6, type: 3}
 --- !u!1 &1137051515 stripped
