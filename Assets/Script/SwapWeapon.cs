@@ -6,7 +6,7 @@ public class SwapWeapon : MonoBehaviour
 {
    int selectWeapon = 1;
     public GameObject AK47;
-    public GameObject Shotgun;
+    public GameObject Rifle;
  
    // Start is called before the first frame update
    void Start() {
@@ -30,12 +30,12 @@ public class SwapWeapon : MonoBehaviour
    void SwitchWeapon(int tipeSenjata) {
         if (tipeSenjata == 1) {
             AK47.SetActive(true);
-            Shotgun.SetActive(false);
+            Rifle.SetActive(false);
             selectWeapon = 1;
         }
         if (tipeSenjata == 2) {
             AK47.SetActive(false);
-            Shotgun.SetActive(true);
+            Rifle.SetActive(true);
             selectWeapon = 2;
         }
     }
