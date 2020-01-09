@@ -62,19 +62,21 @@ public class WeaponController : MonoBehaviour {
        trigger = true;
    }
  
-   public void Shoot() {
-       if (ammo != 0) {
-           RaycastHit hit;
-           Ray ray = new Ray(transform.position, transform.forward);
-           if (Physics.Raycast(ray, out hit, range)) {
-               if (hit.transform.CompareTag("Enemy")) {
-                   hit.transform.gameObject.SendMessage("TakeDamage", damage);
-               }
-               if (hit.rigidbody != null) hit.rigidbody.AddForce(-hit.normal * force);
-           }
-           ammo -= 1;
-       }
-   }
+public void Shoot() {
+    if (ammo != 0) {
+        AK47Shot.Play();
+        ShotgunShot.Play();
+        RaycastHit hit;
+        Ray ray = new Ray(transform.position, transform.forward);
+        if (Physics.Raycast(ray, out hit, range)) {
+            if (hit.transform.CompareTag("Enemy")) {
+                hit.transform.gameObject.SendMessage("TakeDamage", damage);
+            }
+            if (hit.rigidbody != null) hit.rigidbody.AddForce(-hit.normal * force);
+        }
+        ammo -= 1;
+    }
+}
   
    public void Restart() {
        health = 100;
