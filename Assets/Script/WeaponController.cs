@@ -65,7 +65,7 @@ public class WeaponController : MonoBehaviour {
 public void Shoot() {
     if (ammo != 0) {
         AK47Shot.Play();
-        ShotgunShot.Play();
+        RifleShot.Play();
         RaycastHit hit;
         Ray ray = new Ray(transform.position, transform.forward);
         if (Physics.Raycast(ray, out hit, range)) {
